@@ -1,0 +1,14 @@
+:root {
+  --lightgreen: #d6ff79;
+  --mintgreen: #b0ff92;
+  --lavanderblush: #fff2f1;
+  --bluepurple: #a09be7;
+  --purple: #5f00ba;
+}
+body {
+  background-color: var(--purple);
+}
+.container {
+  border: solid var(--lightgreen) 1pt;
+  border-radius: 10px 0px;
+}
