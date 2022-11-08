@@ -16,3 +16,16 @@ body {
   border: solid var(--lightgreen) 1pt;
   border-radius: 10px 0px;
 }
+.card {
+  border: var(--mintgreen) solid 1pt;
+  background-color: var(--bluepurple);
+  box-shadow: var(--purple) 0px 0px 10px;
+  transition: transform 0.3s ease-in-out, background-color 0.5s ease-in-out;
+  color: var(--lavanderblush);
+  text-align: center;
+}
+.card:hover {
+  transform: scale(1.1);
+  z-index: 1;
+  background-color: var(--purple);
+}
