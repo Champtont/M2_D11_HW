@@ -13,7 +13,7 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=metallica")
       <div class="card">
   <img src="${metal.album.cover}" class="card-img-top img-fluid"  alt="...">
   <div class="card-body">
-    <h4 class="card-text">${metal.album.title}</h4>
+    <h4 class="card-text text-truncate">${metal.album.title}</h4>
   </div>
 </div>
 </div>

@@ -16,14 +16,3 @@ body {
   border: solid var(--lightgreen) 1pt;
   border-radius: 10px 0px;
 }
-
-.card-body {
-  overflow: hidden;
-  white-space: nowrap;
-  display: inline-block;
-  text-overflow: ellipsis;
-  width: 250px;
-}
-h4 {
-  text-overflow: ellipsis;
-}
