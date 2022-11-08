@@ -6,9 +6,24 @@
   --purple: #5f00ba;
 }
 body {
-  background-color: var(--purple);
+  background-image: linear-gradient(
+    180deg,
+    var(--lavanderblush),
+    var(--purple)
+  );
 }
 .container {
   border: solid var(--lightgreen) 1pt;
   border-radius: 10px 0px;
+}
+
+.card-body {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  text-overflow: ellipsis;
+  width: 250px;
+}
+h4 {
+  text-overflow: ellipsis;
 }

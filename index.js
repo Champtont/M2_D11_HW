@@ -1,23 +1,28 @@
 //fetch API1
-const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": "6284002c8fmsh48893274fe01f22p15ad42jsn3a0672bc756e",
-    "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-  },
-};
-const getPinkfloyd = () => {
-  fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=pink floyd", options)
-    .then((response) => response.json())
-    .then((response) => {
-      return response;
-    })
-    .catch((err) => console.error(err));
-};
 
-getPinkfloyd();
+fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=metallica")
+  .then((response) => response.json())
+  .then((response) => {
+    console.log(response);
+    console.log(response.data);
+    for (let metal of response.data) {
+      const metalbox = document.getElementById("metal");
+
+      metalbox.innerHTML += `
+      <div class="col-sm-12 col-md-6 col-lg-3 mx-0 mb-3">
+      <div class="card">
+  <img src="${metal.album.cover}" class="card-img-top img-fluid"  alt="...">
+  <div class="card-body">
+    <h4 class="card-text">${metal.album.title}</h4>
+  </div>
+</div>
+</div>
+  `;
+    }
+  })
+  .catch((err) => console.error(err));
+/*getPinkfloyd();
 const renderPinkfloyd = () => {
-  let data = response;
   const unlist = document.getElementById("l1");
   for (let i = 0; i < data.length; i++) {
     const li = document.createElement("li");
@@ -29,7 +34,7 @@ const renderPinkfloyd = () => {
     unlist.appendChild(li);
   }
 };
-renderPinkfloyd();
+renderPinkfloyd();*/
 //fetch 2
 /*const daftpunklist = fetch(
   "https://deezerdevs-deezer.p.rapidapi.com/search?q=daft%20punk",
